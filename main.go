@@ -40,6 +40,7 @@ func main() {
 		fmt.Fprintf(w, "tNow(string format):", timeNow)
 		//fmt.Fprintf(w, "Hello from Flynn on port %s from container %s\nHits = %d\n", port, os.Getenv("HOSTNAME"), count)
 	})
+	http.HandleFunc("/17bb00aed475e027492608694e6b4e1e.txt", func(w http.ResponseWriter, req *http.Request) { fmt.Fprint(w, "17bb00aed475e027492608694e6b4e1e") })
 	fmt.Println("hitcounter listening on port", port)
 	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
